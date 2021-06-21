@@ -49,6 +49,7 @@ function Dynamic() {
       //test
       // for const of etc go through data and combine by type.
       //calculate price, name and quantity
+      //state ? display dependent on amount of data: regec to search data and optional render of extra components in products sub section (variant header)
 
       // console.log(`data is ${JSON.stringify(data.payload[0].mood)}`)
 
@@ -65,7 +66,7 @@ function Dynamic() {
   // dynamic content
 
 
-  
+
 
   
   // console.log(`end of variants = ${variantsMix}`);
