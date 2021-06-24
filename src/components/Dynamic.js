@@ -167,6 +167,9 @@ function Dynamic() {
     console.log(`TEST`);
   }
 
+  // next step: add state for amount of each variant eg "x1"
+  // same process as above
+  
   return (
     <div>
       <div className="box orders-history-block has-shadow-hover">
