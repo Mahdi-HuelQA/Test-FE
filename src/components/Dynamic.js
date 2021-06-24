@@ -38,8 +38,8 @@ function Dynamic() {
     async function fetchApi() {
       const res = await fetch(`https://frontendtest.huel.io/api/line-items`, {
         headers: {
-          'content-type': 'application/json',
-        },
+          'content-type': 'application/json'
+        }
       });
 
       const data = await res.json();
@@ -70,43 +70,28 @@ function Dynamic() {
         savePhotos();
       }
 
-      // setVariantsMix({variantsMix, name: data.line_items[3].name, price: data.line_items[3].price, quantity: data.line_items[3].quantity})
-      // console.log(`start of variants = ${variantsMix}`);
-
       //Next steps
       //annotate
-      //state managent
-      //refactor code and separation on concerns
+      //state management
+      //refactor code and separation of concerns (more components to make code less complex)
       //test
       // for const of etc go through data and combine by type.
-      //calculate price, name and quantity
-      //state ? display dependent on amount of data: regec to search data and optional render of extra components in products sub section (variant header)
-
-      // console.log(`data is ${JSON.stringify(data.payload[0].mood)}`)
+      //Determine price, name and quantity
+      //state ? display dependent on amount of data: regex to search data and optional renders
 
       //PLAN 2:
-      // Reduce function to accumulate price
-      // state of powders, object?
-      //spread operator needed
+      // Reduce function to accumulate
+      // state of powders
+      //spread operator
     }
     fetchApi();
-  }, [
-    variantsMix,
-    count,
-    savePrice,
-    saveExtras,
-    saveNames,
-    savePhotos,
-    priceAdd,
-  ]);
+  }, [variantsMix, count, savePrice, saveExtras, savePhotos, priceAdd]);
 
-  //console.log(`type IS ${typeof(variantsMix)}`)
-
-  // function changeType(){
+  // function checkType(){
   //   variantsMix.Map((post)=>{
   //     return console.log(post.name)})
   // }
-  // changeType()
+  // checkType()
 
   function saveNames() {
     console.log(`VM IS type  = ${typeof variantsMix}`);
@@ -184,71 +169,71 @@ function Dynamic() {
 
   return (
     <div>
-      <div className='box orders-history-block has-shadow-hover'>
-        <div className='order-information'>
-          <h2 className='title is-6 is-marginless'> Dynamic </h2>
+      <div className="box orders-history-block has-shadow-hover">
+        <div className="order-information">
+          <h2 className="title is-6 is-marginless"> Dynamic </h2>
           <div>
-            <div className='order-information-expanded'>
-              <div className='product-list-boxes columns is-multiline'>
-                <div className='column is-6'>
-                  <div className='media'>
-                    <div className='media-left'>
+            <div className="order-information-expanded">
+              <div className="product-list-boxes columns is-multiline">
+                <div className="column is-6">
+                  <div className="media">
+                    <div className="media-left">
                       <img
-                        alt='Product bars'
-                        className='image'
+                        alt="Product bars"
+                        className="image"
                         src={imageOne}
                       />
                     </div>
-                    <div className='media-content'>
+                    <div className="media-content">
                       <div>
-                        <p className='product-title'>{name1}</p>
-                        <p className='product-variants'>1x {variant1}</p>
+                        <p className="product-title">{name1}</p>
+                        <p className="product-variants">1x {variant1}</p>
                       </div>
                     </div>
-                    <div className='media-right'>
-                      <p className='product-price'> ${price1}</p>
+                    <div className="media-right">
+                      <p className="product-price"> ${price1}</p>
                     </div>
                   </div>
                 </div>
-                <div className='column is-6'>
-                  <div className='media'>
-                    <div className='media-left'>
+                <div className="column is-6">
+                  <div className="media">
+                    <div className="media-left">
                       <img
-                        alt='Product bars'
-                        className='image'
+                        alt="Product bars"
+                        className="image"
                         src={imageTwo}
                       />
                     </div>
-                    <div className='media-content'>
+                    <div className="media-content">
                       <div>
-                        <p className='product-title'>{name2}</p>
-                        <p className='product-variants'>1x {variant2} </p>
+                        <p className="product-title">{name2}</p>
+                        <p className="product-variants">1x {variant2} </p>
                       </div>
                     </div>
-                    <div className='media-right'>
-                      <p className='product-price'>${price2} </p>
+                    <div className="media-right">
+                      <p className="product-price">${price2} </p>
                     </div>
                   </div>
                 </div>
-                <div className='column is-6'>
-                  <div className='media'>
-                    <div className='media-left'>
+                <div className="column is-6">
+                  <div className="media">
+                    <div className="media-left">
                       <img
-                        alt='Product bars'
-                        className='image'
+                        alt="Product bars"
+                        className="image"
                         src={imageThree}
                       />
                     </div>
-                    <div className='media-content'>
+                    <div className="media-content">
                       <div>
-                        <p className='product-title'>{name3}</p>
-                        <p className='product-variants'>
+                        <p className="product-title">{name3}</p>
+                        <p className="product-variants">
                           1x {variant5}, 1x {variant3}, 1x {variant4}
                         </p>
                       </div>
                     </div>
-                    <div className='media-right'>
-                      <p className='product-price'>${total}</p>
+                    <div className="media-right">
+                      <p className="product-price">${total}</p>
                     </div>
                   </div>
                 </div>
