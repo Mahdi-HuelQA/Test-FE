@@ -77,7 +77,9 @@ function Dynamic() {
       //test
       // for const of etc go through data and combine by type.
       //Determine price, name and quantity
+      
       //state ? display dependent on amount of data: regex to search data and optional renders
+      // eg if sku === sku.slice(0.4) then...
 
       //PLAN 2:
       // Reduce function to accumulate
@@ -169,7 +171,7 @@ function Dynamic() {
 
   // next step: add state for amount of each variant eg "x1"
   // same process as above
-  
+
   return (
     <div>
       <div className="box orders-history-block has-shadow-hover">
